@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0f0f1a, #0d1117);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-top {
+      background: black;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ff7300;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #ff7300;
+    }
+
+    .contact-section {
+      padding: 80px 40px 40px;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 36px;
+      color: #f97316;
+      margin-bottom: 50px;
+    }
+
+    .contact-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact-box {
+      background: linear-gradient(to bottom, #111130, #0d1117);
+      color: white;
+      border-radius: 20px;
+      padding: 30px 25px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: 1px solid transparent;
+    }
+
+    .contact-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+      border-color: #f97316;
+    }
+
+    .contact-box i {
+      font-size: 36px;
+      color: #f97316;
+      margin-bottom: 15px;
+    }
+
+    .contact-box h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .contact-box p {
+      font-size: 15px;
+      color: #cccccc;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .contact-boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .form-section {
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 500px;
+      margin: auto;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 15px;
+      transition: border 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #f97316;
+      outline: none;
+    }
+
+    .contact-form button {
+      padding: 12px 30px;
+      background-color: #f97316;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #fb923c;
+    }
+
+    .response-message {
+      color: #22c55e;
+      font-size: 16px;
+      margin-top: 10px;
+      display: none;
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .footer-text {
+      text-align: center;
+      color: #999;
+      margin: 80px 0 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="nav-top">
+    <div><strong>&larr; <a href="welcome.html" style="color:#ff7300;text-decoration:none;">Back</a></strong></div>
+    <div class="nav-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2 class="contact-title">Contact Us</h2>
+    <div class="contact-boxes">
+      <div class="contact-box" data-aos="fade-up">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Our Location</h3>
+        <p>Innovate Hub, CSE Department,<br>KCG College of Technology, OMR, Chennai</p>
+      </div>
+      <div class="contact-box" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-phone"></i>
+        <h3>Contact Number</h3>
+        <p>+91 73585 51897<br>+91 75502 27793</p>
+      </div>
+      <div class="contact-box" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-envelope"></i>
+        <h3>Email Address</h3>
+        <p>team.ignite.kcg@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section" data-aos="fade-up" data-aos-delay="300">
+    <h2 class="contact-title">Send Us a Message</h2>
+    <form id="contactForm" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+      <p id="responseMessage" class="response-message">Message Sent!</p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <p class="footer-text">© 2024 Team Ignite. All rights reserved.</p>
+
+  <!-- AOS Animation Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Form Handler -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const response = document.getElementById('responseMessage');
+      response.style.display = 'block';
+      this.reset();
+
+      setTimeout(() => {
+        response.style.display = 'none';
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>

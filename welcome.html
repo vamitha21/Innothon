@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0f0f1a, #0d1117);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container-box {
+      text-align: center;
+      padding: 30px;
+    }
+
+    /* Typing effect without cursor */
+    .heading {
+      font-size: 2.8rem;
+      font-weight: 700;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 0;
+      margin: 0 auto;
+      animation: typing 3s steps(20, end) forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 330px; }
+    }
+
+    .highlight {
+      color: #ff7300;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff7300, 0 0 10px #ff7300;
+      }
+      to {
+        text-shadow: 0 0 20px #ff7300, 0 0 30px #ff7300;
+      }
+    }
+
+    .subheading {
+      font-size: 1.25rem;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeInText 2s ease-in-out 3s forwards;
+    }
+
+    .developer {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeInText 2s ease-in-out 4s forwards;
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 30px;
+      animation: pulseGlow 2.5s infinite ease-in-out, zoomIn 1.5s ease-in-out 5s forwards;
+      opacity: 0;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { filter: drop-shadow(0 0 10px #ff7300); }
+      50% { filter: drop-shadow(0 0 25px #ff7300); }
+    }
+
+    .btn-orange {
+      background-color: #ff7300;
+      color: white;
+      border-radius: 25px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border: none;
+      margin: 10px 0;
+      width: 200px;
+      transition: transform 0.3s ease, background 0.3s;
+      opacity: 0;
+      animation: slideUp 1s ease-out forwards;
+    }
+
+    .btn-orange:first-of-type {
+      animation-delay: 6s;
+    }
+
+    .btn-orange:last-of-type {
+      animation-delay: 6.3s;
+    }
+
+    .btn-orange:hover {
+      background-color: #ff8c1a;
+      transform: scale(1.05);
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-box" data-aos="fade-up">
+    <div class="heading">Innovation <span class="highlight">Hub</span></div>
+    <div class="subheading">Where Innovation Meets <br />Expertise</div>
+    <div class="developer">Developed by Team Ignite</div>
+    
+    <img
+      src="https://spartanexclusiveschool.com/wp-content/uploads/2024/09/png-transparent-blue-hand-and-light-bulb-illustration-innovation-competition-business-social-innovation-marketing-innovation-text-hand-people-thumbnail-removebg-preview.png"
+      alt="Innovation Logo"
+      class="logo"
+    />
+
+    <div>
+      <button class="btn btn-orange">Login</button><br />
+    <a href="innothon.html" class="btn btn-orange">Innothon 24</a>
+
+    </div>
+  </div>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
